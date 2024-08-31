@@ -80,6 +80,73 @@ int main()
         }
         cout<<endl;
     }
-    
-
+    //adding some more new patterns
+    cout<<endl;
+    cout<<"Part (8) :"<<endl;
+    for(int i=0;i<n;i++){ 
+        for(int j=1;j<=n-1-i;j++){
+            cout<<" ";
+        }
+        char ch='A';
+        for(char j=1;j<=(2*i+1);j++){
+            cout<<ch;
+            if(j<=((2*i+1)/2)){
+                ch++;
+            }
+            else{
+                ch--;
+            }
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    cout<<"Part (9) :"<<endl;
+    int sp=2*(n-1);
+    for(int i=0;i<n;i++){
+        for(int j=1;j<=i;j++){
+            cout<<j;
+        }
+        for(int k=1;k<=sp;k++){
+            cout<<" ";
+        }
+        for(int j=i;j>=1;j--){
+            cout<<j;
+        }
+        cout<<endl;
+        sp-=2;
+    }
+    cout<<endl;
+    cout<<"Part (10) :"<<endl;
+    for(int i=0;i<n;i++){
+        for(int j=0;j<i;j++){
+            cout<<" ";
+        }
+        for(int k=0;k<2*n-(2*i+1);k++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    cout<<"Part (11) :"<<endl;
+    for (int i=0;i<2*n;i++){
+        int s=i;
+        if(i>n) s=2*n-i;
+        for(int j=0;j<s;j++){
+            cout<<"*";
+        }
+        cout<<endl;
+    }
+    cout<<endl;
+    cout<<"Part (12) :"<<endl;
+    for (int i=0;i<=n;i++){
+        for(int j=0;j<=n;j++){
+            if(i==0||j==0||j==n||i==n){
+                cout<<"#";
+            }
+            else{
+                cout<<" ";
+            }
+        }
+        cout<<endl;
+    }
 }
